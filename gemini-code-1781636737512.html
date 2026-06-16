@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Multiplayer Web Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-menu" class="ui-layer">
+        <div class="panel">
+            <h1>FPS Multiplayer</h1>
+            <input type="text" id="player-name" placeholder="Enter Username" value="Player">
+            <button id="btn-host">Host New Room</button>
+            <hr>
+            <input type="text" id="room-code-input" placeholder="Enter Room Code">
+            <button id="btn-join">Join Room</button>
+            <p id="menu-status"></p>
+        </div>
+    </div>
+
+    <div id="pause-menu" class="ui-layer hidden">
+        <div class="panel">
+            <h1>Game Paused</h1>
+            <p>Room Code: <span id="display-room-code"></span></p>
+            <p>Click anywhere to resume.</p>
+        </div>
+    </div>
+
+    <div id="crosshair" class="hidden">+</div>
+
+    <div id="game-container"></div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+            }
+        }
+    </script>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>
